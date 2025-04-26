@@ -48,7 +48,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="font-orbitron text-4xl md:text-6xl font-bold text-foreground mb-4"
             >
-              ARJITH A <span className="text-primary">V</span>
+              ARJITH <span className="text-primary">A V</span>
             </motion.h1>
             
             <motion.h2 
