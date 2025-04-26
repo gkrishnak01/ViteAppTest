@@ -42,7 +42,7 @@ async function updateCertifications() {
       details: "Technical training in aeromodelling and UAV design principles",
       icon: "fas fa-plane",
       color: "primary",
-      certificate_path: "/attached_assets/Aerovania cerificate Arjith A V.jpg"
+      certificate_path: "attached_assets/Aerovania cerificate Arjith A V.jpg"
     });
   }
 
