@@ -26,10 +26,9 @@ const SkillBar: FC<SkillBarProps> = ({ name, percentage, color, delay, isInView 
         initial={{ opacity: 0, y: 10 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
         transition={{ duration: 0.4, delay }}
-        className="flex justify-between mb-2"
+        className="mb-2"
       >
         <span className={`font-medium ${textColorClass}`}>{name}</span>
-        <span className="text-foreground/60">{percentage}%</span>
       </motion.div>
       <div className="w-full h-2 bg-background rounded-full overflow-hidden">
         <motion.div 
