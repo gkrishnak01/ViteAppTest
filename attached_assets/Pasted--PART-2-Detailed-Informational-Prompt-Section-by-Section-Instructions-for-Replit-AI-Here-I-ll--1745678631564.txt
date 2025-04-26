@@ -1,0 +1,157 @@
+📄 PART 2: Detailed Informational Prompt — Section-by-Section Instructions for Replit AI
+Here, I'll break each portfolio section into detailed prompts you can directly pass to Replit AI or similar tools.
+(Every block will specify design, animations, content ideas, styling hints.)
+
+🧩 SECTION 1: Hero / Landing Page
+Prompt to Replit AI:
+"Create a full-screen Hero Section with a dark theme (#0e0e10) background.
+Integrate a slow-rotating 3D model of either a satellite, aircraft wing, or composite structure fibers using Three.js or a GLB model.
+
+Place large heading text in the center:
+
+'ARJITH A V' (bold, futuristic font like Orbitron, 80px font size)
+
+Below it: 'Aerospace Engineer | Material Specialist | Sustainable Innovator' (lighter weight)
+
+Below the tagline, place an animated 'View Portfolio' button (hover glow effect, onClick scrolls smoothly to next section).
+
+Add parallax effect with small star fields moving slowly in background using Three.js or simple CSS parallax.
+
+Animate elements with Framer Motion: fade-in text, scale-up on button hover."
+
+🧩 SECTION 2: About Me
+Prompt to Replit AI:
+"Create a clean About Me section with soft fade-in effects.
+Include a short biography paragraph about Arjith A V, Aerospace Materials Engineer focused on sustainable innovation.
+
+Build an Animated Timeline (horizontal or vertical) showing:
+
+MSc in Aerospace Materials (University of Sheffield)
+
+BTech in Aerospace Engineering (Amrita Vishwa Vidyapeetham)
+
+Computer Maths (Chavara Public School)
+
+Beside the timeline, insert small 3D elements floating slowly:
+
+A rotating green globe (symbolizing sustainability)
+
+A stylized aircraft wing (symbolizing aerospace)
+
+Background subtle motion: low-opacity fiber textures (motion blur effect).
+Animate timeline cards with slide-in from left/right as user scrolls."
+
+🧩 SECTION 3: Experience
+Prompt to Replit AI:
+"Design an animated Vertical Timeline for professional experiences.
+
+For each experience:
+
+Atomix Materials (Co-Founder)
+
+Brahmàstra Aerospace (Project Intern)
+
+Use modern icons (Leaf+Lab Flask for Atomix, Rocket for Brahmàstra).
+
+When the user scrolls down:
+
+Animate icons scaling up when entering viewport.
+
+Expand experience cards with smooth sliding.
+
+Include a tiny animated 3D Rocket that moves upward along the timeline path as the user scrolls."
+
+🧩 SECTION 4: Projects and Publications
+Prompt to Replit AI:
+"Create a Projects section using a Card Grid Layout.
+
+Each project (like 'Collaborative Optimization of Medical Supply Chains') should be shown as a flip card:
+
+Front: Project Name + Icon
+
+Back: Short description + Skills/Technologies used.
+
+Add connecting animated SVG lines between cards (appearing as user scrolls) showing evolution and growth.
+
+Add soft hover zoom effect on cards. Smooth transition between front and back on click/hover."
+
+🧩 SECTION 5: Skills and Certifications
+Prompt to Replit AI:
+"Create an animated Skill Progress Section.
+
+For skills:
+
+Engineering (95%)
+
+Composite Structures (90%)
+
+Data Analysis (85%)
+
+Represent skills with animated progress bars (Framer Motion or custom CSS animations).
+
+Certifications:
+
+Web GIS Technology
+
+Energy Literacy Training
+
+GE Aerospace Simulation
+
+Each Certification shown as a floating badge with soft bounce animation on hover."
+
+🧩 SECTION 6: Contact Section
+Prompt to Replit AI:
+"Create a Contact Section.
+
+Include:
+
+Full Name
+
+Email (arjithav2911@gmail.com)
+
+Mobile Number (+447553689777)
+
+Add an Animated Contact Form:
+
+Name, Email, Message fields
+
+On form submit: Animate a small SVG Paper Plane flying away to indicate success.
+
+Behind the form, add a moving SVG background (stylized plane trail or orbit path).
+Keep submit button animated with hover glow and click scaling."
+
+🧩 SECTION 7: Footer
+Prompt to Replit AI:
+"Create a minimalist footer with dark background.
+
+Include:
+
+Animated LinkedIn icon (pulse effect)
+
+Email link (mailto)
+
+Small text: 'Made with ❤️ by Arjith A V'
+
+Add light scroll reveal animation for footer elements."
+
+🎨 GLOBAL SETTINGS
+Prompt to Replit AI:
+"Use these Global Styles:
+
+Dark Mode Theme (#0e0e10 background, white text)
+
+Accent Colors: Green (#38b000), Blue (#00b4d8)
+
+Font 1 (Headings): Orbitron or Poppins
+
+Font 2 (Body): Lato or Inter
+
+Responsive Design: Desktop, Tablet, Mobile breakpoints
+
+Smooth Snap Scrolling across all sections
+
+Page transitions using Framer Motion
+
+Lazy Load all 3D assets for performance
+
+Optimize for loading speed and SEO meta tags."
