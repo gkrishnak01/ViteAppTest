@@ -9,8 +9,7 @@ const fallbackTechnicalSkills = [
   { id: 1, name: 'Composite Structures', percentage: 90, type: 'technical', createdAt: new Date() },
   { id: 2, name: 'CFD Analysis', percentage: 85, type: 'technical', createdAt: new Date() },
   { id: 3, name: 'Aerodynamics', percentage: 80, type: 'technical', createdAt: new Date() },
-  { id: 4, name: 'Sustainable Materials', percentage: 95, type: 'technical', createdAt: new Date() },
-  { id: 5, name: 'Data Analysis', percentage: 75, type: 'technical', createdAt: new Date() }
+  { id: 4, name: 'Sustainable Materials', percentage: 95, type: 'technical', createdAt: new Date() }
 ];
 
 const fallbackBusinessSkills = [
@@ -40,13 +39,6 @@ const fallbackTools = [
     name: 'CAD Software', 
     icon: 'fas fa-drafting-compass', 
     tags: ['3D Modeling'],
-    createdAt: new Date()
-  },
-  { 
-    id: 4,
-    name: 'Data Analysis', 
-    icon: 'fas fa-chart-line', 
-    tags: ['Market Intelligence'],
     createdAt: new Date()
   }
 ];
@@ -303,7 +295,7 @@ const SkillsSection = () => {
                       
                       {cert.certificate_path && (
                         <a 
-                          href={cert.certificate_path}
+                          href={cert.certificate_path.startsWith('/') ? cert.certificate_path.substring(1) : cert.certificate_path}
                           target="_blank" 
                           rel="noopener noreferrer"
                           className={`mt-4 inline-block px-3 py-1 bg-${cert.color}/10 text-${cert.color} text-xs rounded-md hover:bg-${cert.color}/20 transition-colors`}

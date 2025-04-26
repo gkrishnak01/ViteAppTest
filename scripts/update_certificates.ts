@@ -8,7 +8,7 @@ async function updateCertifications() {
   // Update GE Aerospace certificate
   await db.update(certifications)
     .set({
-      certificate_path: "/attached_assets/GE aerospace explore engineering job simulaion certificate.pdf",
+      certificate_path: "attached_assets/GE aerospace explore engineering job simulaion certificate.pdf",
       details: "Explore Engineering Job Simulation - April 2025"
     })
     .where(eq(certifications.name, "GE Aerospace"));
@@ -16,7 +16,7 @@ async function updateCertifications() {
   // Update Energy Literacy Training certificate
   await db.update(certifications)
     .set({
-      certificate_path: "/attached_assets/ARJITH A V-Energy swaraj foundation.pdf",
+      certificate_path: "attached_assets/ARJITH A V-Energy swaraj foundation.pdf",
       details: "Energy Swaraj Foundation - Sustainable Energy Solutions"
     })
     .where(eq(certifications.name, "Energy Literacy Training"));
@@ -24,7 +24,7 @@ async function updateCertifications() {
   // Update Web GIS Certificate
   await db.update(certifications)
     .set({
-      certificate_path: "/attached_assets/WEB GIS CERTIFICATE BY ISRO.pdf",
+      certificate_path: "attached_assets/WEB GIS CERTIFICATE BY ISRO.pdf",
       details: "ISRO Web GIS Technology Certificate"
     })
     .where(eq(certifications.name, "Web GIS Technology"));
