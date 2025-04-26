@@ -12,7 +12,7 @@ import MobileNavigation from "@/components/MobileNavigation";
 const Home = () => {
   useEffect(() => {
     // Set title when component mounts
-    document.title = "Arjitha V | Aerospace Engineer & Materials Specialist";
+    document.title = "Arjith A V | Aerospace Engineer & Materials Specialist";
 
     // Scroll to top when component mounts
     window.scrollTo(0, 0);

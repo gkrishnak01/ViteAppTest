@@ -300,6 +300,17 @@ const SkillsSection = () => {
                       </div>
                       <p className="text-sm mt-2 text-foreground/80">{cert.description}</p>
                       <p className="text-xs mt-4 text-foreground/50">{cert.details}</p>
+                      
+                      {cert.certificate_path && (
+                        <a 
+                          href={cert.certificate_path}
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className={`mt-4 inline-block px-3 py-1 bg-${cert.color}/10 text-${cert.color} text-xs rounded-md hover:bg-${cert.color}/20 transition-colors`}
+                        >
+                          View Certificate <i className="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                      )}
                     </div>
                   </motion.div>
                 ))}
