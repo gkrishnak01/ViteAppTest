@@ -51,6 +51,7 @@ export const certifications = pgTable("certifications", {
   details: text("details").notNull(),
   icon: text("icon").notNull(),
   color: varchar("color", { length: 20 }).notNull(),
+  certificate_path: text("certificate_path"),
   createdAt: timestamp("created_at").defaultNow(),
 });
 
