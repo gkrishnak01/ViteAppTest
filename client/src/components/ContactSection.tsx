@@ -112,7 +112,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-foreground/50">Phone</p>
-                  <a href="tel:+447553689777" className="text-primary hover:text-primary/80 transition-colors duration-300">+44 7553 689777</a>
+                  <p className="text-primary">+44 7553 689777</p>
                 </div>
               </div>
               

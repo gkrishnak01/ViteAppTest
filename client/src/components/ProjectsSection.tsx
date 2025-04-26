@@ -157,7 +157,7 @@ const ProjectsSection = () => {
             <p>Error loading projects. Please try again later.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-28 relative">
             {/* SVG connecting lines (will appear between cards) */}
             <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-25" style={{ overflow: 'visible' }}>
               {projects && projects.length > 1 && (

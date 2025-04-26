@@ -38,7 +38,7 @@ const FlipCard: FC<FlipCardProps> = ({ title, summary, description, achievements
     <div className="flip-card h-80 perspective-1000">
       <div className="flip-card-inner relative w-full h-full">
         {/* Front */}
-        <div className={`flip-card-front absolute w-full h-full bg-background/30 backdrop-blur-sm rounded-lg ${classes.border} overflow-hidden z-10`}>
+        <div className={`flip-card-front bg-background/30 backdrop-blur-sm rounded-lg ${classes.border} overflow-hidden`}>
           <div className="absolute inset-0 overflow-hidden">
             {/* SVG background pattern instead of image */}
             <svg
@@ -89,7 +89,7 @@ const FlipCard: FC<FlipCardProps> = ({ title, summary, description, achievements
         </div>
         
         {/* Back */}
-        <div className={`flip-card-back absolute w-full h-full bg-background/80 backdrop-blur-sm rounded-lg ${classes.border} p-6 flex flex-col z-20`}>
+        <div className={`flip-card-back bg-background/80 backdrop-blur-sm rounded-lg ${classes.border} p-6 flex flex-col`}>
           <h3 className={`font-orbitron text-lg font-semibold ${classes.title} mb-4`}>{title}</h3>
           
           <div className="flex-grow space-y-3 text-foreground/80 text-sm">

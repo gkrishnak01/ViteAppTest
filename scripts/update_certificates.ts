@@ -46,39 +46,13 @@ async function updateCertifications() {
     });
   }
 
-  // Add Technical Publication & AI/Data Science Certificate
-  const aiCertExists = await db.select()
-    .from(certifications)
-    .where(eq(certifications.name, "Technical Publication & AI/Data Science"))
-    .then(res => res.length > 0);
+  // Delete Technical Publication & AI/Data Science Certificate if it exists
+  await db.delete(certifications)
+    .where(eq(certifications.name, "Technical Publication & AI/Data Science"));
 
-  if (!aiCertExists) {
-    await db.insert(certifications).values({
-      name: "Technical Publication & AI/Data Science",
-      description: "Webinar Participant – AI in Aerospace",
-      details: "Advanced training in applying AI and data science to aerospace engineering problems",
-      icon: "fas fa-brain",
-      color: "secondary",
-      certificate_path: null // Add path if available
-    });
-  }
-
-  // Add SARC Certificate
-  const sarcExists = await db.select()
-    .from(certifications)
-    .where(eq(certifications.name, "SARC"))
-    .then(res => res.length > 0);
-
-  if (!sarcExists) {
-    await db.insert(certifications).values({
-      name: "SARC",
-      description: "Space Advancement And Research Cell",
-      details: "Research and development in advanced space technologies and applications",
-      icon: "fas fa-satellite",
-      color: "accent",
-      certificate_path: null // Add path if available
-    });
-  }
+  // Delete SARC Certificate if it exists
+  await db.delete(certifications)
+    .where(eq(certifications.name, "SARC"));
 
   console.log("✅ Certificates updated successfully!");
 }
