@@ -130,20 +130,10 @@ async function seedDatabase() {
       icon: 'fas fa-drafting-compass', 
       tags: ['3D Modeling']
     },
-    {
-      name: 'MATLAB',
-      icon: 'fas fa-calculator',
-      tags: ['Data Analysis']
-    },
-    {
-      name: 'Python',
-      icon: 'fab fa-python',
-      tags: ['Programming']
-    },
-    {
-      name: 'C/C++',
-      icon: 'fas fa-code',
-      tags: ['Programming']
+    { 
+      name: 'Data Analysis', 
+      icon: 'fas fa-chart-line', 
+      tags: ['Market Intelligence']
     }
   ];
 
