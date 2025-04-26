@@ -3,12 +3,12 @@ import { certifications } from "../shared/schema";
 import { eq } from "drizzle-orm";
 
 async function updateCertifications() {
-  console.log("🔄 Updating certifications with file paths...");
+  console.log("🔄 Updating certifications with new URLs...");
 
   // Update GE Aerospace certificate
   await db.update(certifications)
     .set({
-      certificate_path: "attached_assets/GE aerospace explore engineering job simulaion certificate.pdf",
+      certificate_path: "https://drive.google.com/file/d/1puzg7oJcfaghEEE5kTCKJ3LK0fKli_Cf/view?usp=drive_link",
       details: "Explore Engineering Job Simulation - April 2025"
     })
     .where(eq(certifications.name, "GE Aerospace"));
@@ -16,7 +16,7 @@ async function updateCertifications() {
   // Update Energy Literacy Training certificate
   await db.update(certifications)
     .set({
-      certificate_path: "attached_assets/ARJITH A V-Energy swaraj foundation.pdf",
+      certificate_path: "https://drive.google.com/file/d/1sDMwElWBKhvd3K_VGRoIf1bL_CypNg7Z/view?usp=drive_link",
       details: "Energy Swaraj Foundation - Sustainable Energy Solutions"
     })
     .where(eq(certifications.name, "Energy Literacy Training"));
@@ -24,37 +24,21 @@ async function updateCertifications() {
   // Update Web GIS Certificate
   await db.update(certifications)
     .set({
-      certificate_path: "attached_assets/WEB GIS CERTIFICATE BY ISRO.pdf",
+      certificate_path: "https://drive.google.com/file/d/1kqrUrpPxNliKC6tZAZF-BtrCKtnM4Dd1/view?usp=drive_link",
       details: "ISRO Web GIS Technology Certificate"
     })
     .where(eq(certifications.name, "Web GIS Technology"));
 
-  // Add Aerovania Certificate
-  const aerovaniaExists = await db.select()
-    .from(certifications)
-    .where(eq(certifications.name, "Aerovania"))
-    .then(res => res.length > 0);
-
-  if (!aerovaniaExists) {
-    await db.insert(certifications).values({
-      name: "Aerovania",
+  // Update Aerovania Certificate
+  await db.update(certifications)
+    .set({
+      certificate_path: "https://drive.google.com/file/d/1gIHYGFv5iU2hAUaxqgTM9z9sg2aFWrmz/view?usp=drive_link",
       description: "Aeromodelling Workshop",
-      details: "Technical training in aeromodelling and UAV design principles",
-      icon: "fas fa-plane",
-      color: "primary",
-      certificate_path: "attached_assets/Aerovania cerificate Arjith A V.jpg"
-    });
-  }
+      details: "Technical training in aeromodelling and UAV design principles"
+    })
+    .where(eq(certifications.name, "Aerovania"));
 
-  // Delete Technical Publication & AI/Data Science Certificate if it exists
-  await db.delete(certifications)
-    .where(eq(certifications.name, "Technical Publication & AI/Data Science"));
-
-  // Delete SARC Certificate if it exists
-  await db.delete(certifications)
-    .where(eq(certifications.name, "SARC"));
-
-  console.log("✅ Certificates updated successfully!");
+  console.log("✅ Certificate links updated successfully!");
 }
 
 // Execute the update function
