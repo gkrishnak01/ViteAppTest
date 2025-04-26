@@ -3,56 +3,90 @@ import { certifications } from "../shared/schema";
 import { eq } from "drizzle-orm";
 
 async function updateCertifications() {
-  console.log("🔄 Updating certifications...");
+  console.log("🔄 Updating certifications with file paths...");
 
-  // Delete existing certifications
-  await db.delete(certifications);
+  // Update GE Aerospace certificate
+  await db.update(certifications)
+    .set({
+      certificate_path: "/attached_assets/GE aerospace explore engineering job simulaion certificate.pdf",
+      details: "Explore Engineering Job Simulation - April 2025"
+    })
+    .where(eq(certifications.name, "GE Aerospace"));
 
-  // Insert updated certifications
-  const certificationsData = [
-    {
-      name: 'GE Aerospace',
-      description: 'Explore Engineering Job Simulation',
-      details: 'Specialized training in aerospace engineering workflows, energy source design, and performance implications. Completed April 2025.',
-      icon: 'fas fa-certificate',
-      color: 'primary',
-      certificate_path: '/assets/ge-aerospace-certificate.pdf'
-    },
-    {
-      name: 'ISRO',
-      description: 'Overview of Web GIS Technology',
-      details: 'Comprehensive training on Web GIS technologies by Indian Institute of Remote Sensing (IIRS), ISRO. Completed July 2021.',
-      icon: 'fas fa-globe',
-      color: 'secondary',
-      certificate_path: '/assets/webgis-certificate.pdf'
-    },
-    {
-      name: 'Energy Swaraj Foundation',
-      description: 'Energy Literacy Training',
-      details: 'Comprehensive understanding of energy systems, sustainability principles, and alternative energy solutions. Completed March 2023.',
-      icon: 'fas fa-bolt',
-      color: 'accent',
-      certificate_path: '/assets/energy-swaraj-certificate.pdf'
-    },
-    {
-      name: 'SARC & AeroVania',
-      description: 'Technical Publication & AI/Data Science in Aerospace',
-      details: 'Webinar participation on technical publication and use of AI & Data Science in aerospace. Credential ID: SARCA00402078. Completed August 2021.',
-      icon: 'fas fa-rocket',
-      color: 'primary',
-      certificate_path: '/assets/aerovania-certificate.jpg'
-    }
-  ];
+  // Update Energy Literacy Training certificate
+  await db.update(certifications)
+    .set({
+      certificate_path: "/attached_assets/ARJITH A V-Energy swaraj foundation.pdf",
+      details: "Energy Swaraj Foundation - Sustainable Energy Solutions"
+    })
+    .where(eq(certifications.name, "Energy Literacy Training"));
 
-  await db.insert(certifications).values(certificationsData);
+  // Update Web GIS Certificate
+  await db.update(certifications)
+    .set({
+      certificate_path: "/attached_assets/WEB GIS CERTIFICATE BY ISRO.pdf",
+      details: "ISRO Web GIS Technology Certificate"
+    })
+    .where(eq(certifications.name, "Web GIS Technology"));
 
-  console.log("✅ Certifications updated successfully!");
+  // Add Aerovania Certificate
+  const aerovaniaExists = await db.select()
+    .from(certifications)
+    .where(eq(certifications.name, "Aerovania"))
+    .then(res => res.length > 0);
+
+  if (!aerovaniaExists) {
+    await db.insert(certifications).values({
+      name: "Aerovania",
+      description: "Aeromodelling Workshop",
+      details: "Technical training in aeromodelling and UAV design principles",
+      icon: "fas fa-plane",
+      color: "primary",
+      certificate_path: "/attached_assets/Aerovania cerificate Arjith A V.jpg"
+    });
+  }
+
+  // Add Technical Publication & AI/Data Science Certificate
+  const aiCertExists = await db.select()
+    .from(certifications)
+    .where(eq(certifications.name, "Technical Publication & AI/Data Science"))
+    .then(res => res.length > 0);
+
+  if (!aiCertExists) {
+    await db.insert(certifications).values({
+      name: "Technical Publication & AI/Data Science",
+      description: "Webinar Participant – AI in Aerospace",
+      details: "Advanced training in applying AI and data science to aerospace engineering problems",
+      icon: "fas fa-brain",
+      color: "secondary",
+      certificate_path: null // Add path if available
+    });
+  }
+
+  // Add SARC Certificate
+  const sarcExists = await db.select()
+    .from(certifications)
+    .where(eq(certifications.name, "SARC"))
+    .then(res => res.length > 0);
+
+  if (!sarcExists) {
+    await db.insert(certifications).values({
+      name: "SARC",
+      description: "Space Advancement And Research Cell",
+      details: "Research and development in advanced space technologies and applications",
+      icon: "fas fa-satellite",
+      color: "accent",
+      certificate_path: null // Add path if available
+    });
+  }
+
+  console.log("✅ Certificates updated successfully!");
 }
 
 // Execute the update function
 updateCertifications()
   .catch(e => {
-    console.error("Error updating certifications:", e);
+    console.error("Error updating certificates:", e);
     process.exit(1);
   })
   .finally(() => {

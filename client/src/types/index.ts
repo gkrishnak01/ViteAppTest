@@ -6,7 +6,7 @@ export interface Project {
   description: string;
   achievements: string[];
   tags: string[];
-  color: 'primary' | 'secondary' | 'accent';
+  color: string; // adjust to match the data coming from database
   createdAt: Date;
   updatedAt: Date;
 }
@@ -16,7 +16,7 @@ export interface Skill {
   id: number;
   name: string;
   percentage: number;
-  type: 'technical' | 'business';
+  type: string; // adjust to match the data coming from database
   createdAt: Date;
 }
 
@@ -34,7 +34,8 @@ export interface Certification {
   description: string;
   details: string;
   icon: string;
-  color: 'primary' | 'secondary' | 'accent';
+  color: string; // adjust to match the data coming from database
+  certificate_path?: string | null;
   createdAt: Date;
 }
 
@@ -47,7 +48,7 @@ export interface Experience {
   period: string;
   responsibilities: string[];
   icon: string;
-  color: 'primary' | 'secondary' | 'accent';
+  color: string; // adjust to match the data coming from database
   createdAt: Date;
 }
 
@@ -58,7 +59,7 @@ export interface Education {
   degree: string;
   period: string;
   description: string;
-  color: 'primary' | 'secondary' | 'accent';
+  color: string; // adjust to match the data coming from database
   createdAt: Date;
 }
 

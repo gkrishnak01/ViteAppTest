@@ -34,7 +34,7 @@ const NavigationDots = () => {
   }, []);
 
   return (
-    <div className="fixed right-8 top-1/2 transform -translate-y-1/2 z-50 hidden md:block">
+    <div className="fixed right-8 top-1/2 transform -translate-y-1/2 z-[100] hidden md:block">
       <div className="flex flex-col space-y-4">
         {sections.map((section) => (
           <a 
