@@ -1,0 +1,90 @@
+Got it! I'll add this new issue about the Certificates section too, and organize everything clearly so that you can easily hand it over to your developer.
+
+Here’s the final organized version including everything you've mentioned:
+
+
+---
+
+Issues Identified in the Portfolio Website
+
+1. Let's Connect Section
+
+Message Sending Issue:
+After filling the form (Name, Email ID, and Message) and clicking the "Send" button, the system shows that the message is sent.
+However, the email is not actually received at the intended email address: arjithav2911@gmail.com.
+→ Action Needed: Ensure that the form submission is properly configured so that messages are delivered to the correct email.
+
+Email ID Clickability:
+In the "Get In Touch" section, the email address should be clickable.
+When clicked, it should open the user's default email application (like Gmail) with a new draft addressed to arjithav2911@gmail.com.
+
+LinkedIn Profile Link:
+The LinkedIn icon or text should be properly linked.
+Clicking it should directly open my LinkedIn profile page (LinkedIn URL to be shared if needed).
+
+
+
+---
+
+2. Projects & Research Section
+
+Card Flipping Issue:
+While flipping project cards (like "Sustainable Compost Development"), the content or skills from other cards (like "Medical Supply Chain Skills") overlap and blur the view.
+Similar problems occur with:
+
+"Rocket Propulsion Optimization"
+
+"Titanium Recycling Process"
+→ Action Needed: Fix the flipping animation or layout so that each card displays only its own content without interference from others.
+
+
+Spacing Issue:
+There is insufficient vertical space between the project cards, making the section look cramped.
+More spacing is needed between:
+
+"Sustainable Composite Development", "Medical Supply Chain Skills", and "Composite Market Intelligence"
+
+"Rocket Propulsion Optimization", "Titanium Recycling Process", and "Process Recycling Studies"
+→ Action Needed: Add proper vertical margins or padding between project sections for better readability and layout clarity.
+
+
+
+
+---
+
+3. Certifications Section
+
+Certificate Link Error (404):
+When clicking on the certificates in the "Certifications" tab, it shows a 404 Page Not Found error.
+→ Action Needed:
+
+Recheck the paths or links attached to the certificates.
+
+Ensure that clicking on a certificate opens the correct page or image without any 404 error.
+
+
+
+
+---
+
+Summary of Required Actions
+
+Fix email sending functionality so that form messages are properly received.
+
+Make email ID clickable and open Gmail or default email app.
+
+Link LinkedIn profile correctly.
+
+Correct flipping and layout issues in Projects & Research section.
+
+Increase vertical spacing between project cards.
+
+Fix 404 errors for certificates in the Certifications section.
+
+
+
+---
+
+Would you also like me to prepare this as a PDF file so that you can directly send it professionally to your developer?
+(It's just a click away — I can create it quickly!)
+Shall I prepare it?

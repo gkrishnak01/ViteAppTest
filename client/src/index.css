@@ -123,11 +123,14 @@ html, body {
   /* Flip card styling */
   .flip-card {
     perspective: 1000px;
+    isolation: isolate;
   }
   
   .flip-card-inner {
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    position: relative; 
+    isolation: isolate;
   }
   
   .flip-card:hover .flip-card-inner {
@@ -137,6 +140,7 @@ html, body {
   .flip-card-front, .flip-card-back {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    isolation: isolate;
   }
   
   .flip-card-back {

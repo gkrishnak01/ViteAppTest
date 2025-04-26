@@ -132,7 +132,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-foreground/50">LinkedIn</p>
-                  <a href="https://linkedin.com/in/" className="text-primary hover:text-primary/80 transition-colors duration-300">LinkedIn Profile</a>
+                  <a href="https://www.linkedin.com/in/arjith-a-v-467a49230/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors duration-300">Arjith A V</a>
                 </div>
               </div>
             </div>
