@@ -295,7 +295,7 @@ const SkillsSection = () => {
                       
                       {cert.certificate_path && (
                         <a 
-                          href={cert.certificate_path.startsWith('/') ? cert.certificate_path.substring(1) : cert.certificate_path}
+                          href={cert.certificate_path}
                           target="_blank" 
                           rel="noopener noreferrer"
                           className={`mt-4 inline-block px-3 py-1 bg-${cert.color}/10 text-${cert.color} text-xs rounded-md hover:bg-${cert.color}/20 transition-colors`}
