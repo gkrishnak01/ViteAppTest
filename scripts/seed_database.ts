@@ -129,6 +129,11 @@ async function seedDatabase() {
       name: 'CAD Software', 
       icon: 'fas fa-drafting-compass', 
       tags: ['3D Modeling']
+    },
+    { 
+      name: 'Data Analysis', 
+      icon: 'fas fa-chart-line', 
+      tags: ['Market Intelligence']
     }
   ];
 

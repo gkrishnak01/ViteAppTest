@@ -16,7 +16,7 @@ async function updateCertifications() {
   // Update Energy Literacy Training certificate
   await db.update(certifications)
     .set({
-      certificate_path: "https://drive.google.com/file/d/1sDMwElWBKhvd3K_VGRoIf1bL_CypNg7Z/preview",
+      certificate_path: "https://drive.google.com/file/d/1sDMwElWBKhvd3K_VGRoIf1bL_CypNg7Z/view?usp=drive_link",
       details: "Energy Swaraj Foundation - Sustainable Energy Solutions"
     })
     .where(eq(certifications.name, "Energy Literacy Training"));
