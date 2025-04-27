@@ -58,8 +58,8 @@ const HeroSection = () => {
               className="font-inter text-lg md:text-2xl text-foreground/80 mb-8"
             >
               <span className="text-secondary/90 dark:text-secondary font-semibold">Aerospace Engineer</span> | 
-              <span className="text-primary"> Material Specialist</span> | 
-              <span className="text-accent"> Sustainable Innovator</span>
+              <span className="text-primary font-semibold"> Material Specialist</span> | 
+              <span className="text-accent font-semibold"> Sustainable Innovator</span>
             </motion.h2>
             
             <motion.p 
