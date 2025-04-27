@@ -27,7 +27,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="w-40 h-40 rounded-full overflow-hidden shadow-lg shadow-primary/30 border-2 border-primary mb-4 md:mb-0 flex-shrink-0"
+            className="w-40 h-40 rounded-full overflow-hidden shadow-lg shadow-primary/50 border-4 border-primary mb-4 md:mb-0 flex-shrink-0"
           >
             <img src={profilePhoto} alt="Arjith A V" className="w-full h-full object-cover" />
           </motion.div>
@@ -37,7 +37,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4"
+              className="inline-block bg-gradient-to-r from-primary/90 to-secondary/90 bg-clip-text text-transparent dark:from-primary dark:to-secondary mb-4 font-bold"
             >
               <p className="font-poppins text-sm tracking-wider">Engineering Tomorrow's Materials, Today</p>
             </motion.div>
@@ -48,7 +48,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="font-orbitron text-4xl md:text-6xl font-bold text-foreground mb-4"
             >
-              ARJITH <span className="text-primary">A V</span>
+              ARJITH <span className="text-primary dark:text-primary">A V</span>
             </motion.h1>
             
             <motion.h2 
@@ -57,7 +57,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="font-inter text-lg md:text-2xl text-foreground/80 mb-8"
             >
-              <span className="text-secondary">Aerospace Engineer</span> | 
+              <span className="text-secondary/90 dark:text-secondary font-semibold">Aerospace Engineer</span> | 
               <span className="text-primary"> Material Specialist</span> | 
               <span className="text-accent"> Sustainable Innovator</span>
             </motion.h2>
