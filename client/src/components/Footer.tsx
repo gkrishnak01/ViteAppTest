@@ -18,15 +18,49 @@ const Footer = () => {
           transition={{ duration: 0.5 }}
           className="flex items-center justify-center space-x-4"
         >
-          <i className="fas fa-rocket text-primary/50"></i>
-          <i className="fas fa-atom text-secondary/50"></i>
-          <p className="text-foreground/70 text-sm px-3">
-            © 2025 Copyright Arjith Anilkumar Viji — Materials Alchemist & Aerospace Dreamer
-          </p>
-          <i className="fas fa-flask text-accent/50"></i>
           <motion.div
             animate={{ 
               rotate: [0, 360],
+              scale: [1, 1.2, 1]
+            }}
+            transition={{ 
+              duration: 10,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          >
+            <i className="fas fa-rocket text-primary/50"></i>
+          </motion.div>
+          <motion.div
+            animate={{ 
+              rotate: [0, -360]
+            }}
+            transition={{ 
+              duration: 8,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          >
+            <i className="fas fa-atom text-secondary/50"></i>
+          </motion.div>
+          <p className="text-foreground/70 text-sm px-3">
+            © 2025 Copyright Arjith Anilkumar Viji — Materials Alchemist & Aerospace Dreamer
+          </p>
+          <motion.div
+            animate={{ 
+              rotate: [0, 360]
+            }}
+            transition={{ 
+              duration: 12,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          >
+            <i className="fas fa-flask text-accent/50"></i>
+          </motion.div>
+          <motion.div
+            animate={{ 
+              rotate: [0, -360],
               scale: [1, 1.2, 1]
             }}
             transition={{ 
