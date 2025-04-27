@@ -4,9 +4,9 @@ import NotFound from "@/pages/not-found";
 
 function Router() {
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-    </Switch>
+    //<Switch>
+      <Home />
+    //</Switch>
   );
 }
 
