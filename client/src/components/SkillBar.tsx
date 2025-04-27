@@ -3,22 +3,13 @@ import { FC } from 'react';
 
 interface SkillBarProps {
   name: string;
-  percentage: number;
   color: 'primary' | 'secondary';
   delay: number;
   isInView: boolean;
 }
 
-const SkillBar: FC<SkillBarProps> = ({ name, percentage, color, delay, isInView }) => {
-  const variants = {
-    hidden: { width: 0 },
-    visible: { width: `${percentage}%` }
-  };
-
+const SkillBar: FC<SkillBarProps> = ({ name, color, delay, isInView }) => {
   const textColorClass = color === 'primary' ? 'text-primary' : 'text-secondary';
-  const gradientClass = color === 'primary' 
-    ? 'bg-gradient-to-r from-primary to-secondary' 
-    : 'bg-gradient-to-r from-secondary to-accent';
 
   return (
     <div className="skill-item">
@@ -30,15 +21,6 @@ const SkillBar: FC<SkillBarProps> = ({ name, percentage, color, delay, isInView 
       >
         <span className={`font-medium ${textColorClass}`}>{name}</span>
       </motion.div>
-      <div className="w-full h-2 bg-background rounded-full overflow-hidden">
-        <motion.div 
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          variants={variants}
-          transition={{ duration: 1.5, delay: delay + 0.2, ease: "easeOut" }}
-          className={`h-full ${gradientClass} rounded-full`}
-        />
-      </div>
     </div>
   );
 };
