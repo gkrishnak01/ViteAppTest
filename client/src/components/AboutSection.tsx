@@ -31,7 +31,7 @@ const AboutSection = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-4"></div>
         </motion.div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <motion.div 
@@ -49,7 +49,7 @@ const AboutSection = () => {
                 </p>
               </div>
             </motion.div>
-            
+
             <motion.div 
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
@@ -61,11 +61,11 @@ const AboutSection = () => {
               <div className="relative bg-background/80 backdrop-blur-sm p-6 rounded-lg border border-secondary/20">
                 <h3 className="font-poppins text-xl font-semibold mb-4 text-secondary">Entrepreneurial Spirit</h3>
                 <p className="text-foreground/80 leading-relaxed">
-                  Co-founded Atomix Materials, a startup driving adoption of eco-friendly composite solutions in B2B sectors. Led product development initiatives and secured pilot funding through investor-ready business models focused on sustainability.
+                  Co-founded Atomix Materials, a startup driving the adoption of eco friendly composite solutions in B2B sectors. Led product development initiatives and secured pilot funding through investor-ready business models focused on sustainability.
                 </p>
               </div>
             </motion.div>
-            
+
             <motion.div 
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
@@ -77,12 +77,12 @@ const AboutSection = () => {
               <div className="relative bg-background/80 backdrop-blur-sm p-6 rounded-lg border border-accent/20">
                 <h3 className="font-poppins text-xl font-semibold mb-4 text-accent">Technical Excellence</h3>
                 <p className="text-foreground/80 leading-relaxed">
-                  Optimized rocket apogee by 12× during an internship at Brahmàstra Aerospace through computational analysis and iterative testing. Adept at CFD simulations, market intelligence, and ESG-aligned product development.
+                  Optimized rocket apogee by 12× through computational analysis and iterative testing. Adept at CFD simulations, market intelligence, and ESG-aligned product development.
                 </p>
               </div>
             </motion.div>
           </div>
-          
+
           <div className="space-y-8">
             <motion.h3 
               initial="hidden"
@@ -93,11 +93,11 @@ const AboutSection = () => {
             >
               Education Timeline
             </motion.h3>
-            
+
             <div className="relative pl-8 space-y-8">
               {/* Timeline line */}
               <div className="absolute left-0 top-2 bottom-2 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent"></div>
-              
+
               {/* University of Sheffield */}
               <TimelineItem 
                 delay={0.3}
@@ -107,7 +107,7 @@ const AboutSection = () => {
                 description="Focus: Sustainable composites, polymer recycling, and Titanium reuse."
                 isInView={isInView}
               />
-              
+
               {/* Amrita Vishwa Vidyapeetham */}
               <TimelineItem 
                 delay={0.5}
@@ -117,18 +117,18 @@ const AboutSection = () => {
                 description="Key coursework: Aerodynamics, composite materials, propulsion systems."
                 isInView={isInView}
               />
-              
+
               {/* Chavara Public School */}
               <TimelineItem 
                 delay={0.7}
                 color="accent"
-                title="Chavara Public School Pala"
+                title="Chavara Public School"
                 period="Computer Maths | June 2017 – May 2019"
                 description="Foundation in computational thinking and mathematics."
                 isInView={isInView}
               />
             </div>
-            
+
             <motion.div 
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
@@ -158,7 +158,7 @@ const AboutSection = () => {
             </motion.div>
           </div>
         </div>
-        
+
         {/* 3D Floating Elements */}
         <div className="hidden lg:block">
           <motion.div 
@@ -192,7 +192,7 @@ const AboutSection = () => {
               </defs>
             </svg>
           </motion.div>
-          
+
           <motion.div 
             animate={{ 
               rotate: 360 

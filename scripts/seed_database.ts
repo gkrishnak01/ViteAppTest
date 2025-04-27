@@ -145,7 +145,7 @@ async function seedDatabase() {
     {
       name: 'GE Aerospace',
       description: 'Explore Engineering Job Simulation',
-      details: 'Specialized training in aerospace engineering workflows and industry standards.',
+      details: 'Explore Engineering Job Simulation. Specialized training in aerospace engineering workflows and industry standards.',
       icon: 'fas fa-certificate',
       color: 'primary'
     },
