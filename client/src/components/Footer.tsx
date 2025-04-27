@@ -8,11 +8,15 @@ const Footer = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="container mx-auto"
+        className="container mx-auto flex items-center justify-center space-x-2"
       >
-        <p className="text-foreground/70 text-sm">
-          Made with <span className="text-red-500">❤</span> by Arjith A V &copy; {new Date().getFullYear()}
+        <i className="fas fa-rocket text-primary/50"></i>
+        <i className="fas fa-atom text-secondary/50"></i>
+        <p className="text-foreground/70 text-sm px-3">
+          © 2025 Copyright Arjith Anilkumar Viji — Materials Alchemist & Aerospace Dreamer
         </p>
+        <i className="fas fa-flask text-accent/50"></i>
+        <i className="fas fa-satellite text-primary/50"></i>
       </motion.div>
     </footer>
   );
