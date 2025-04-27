@@ -20,15 +20,24 @@ const SkillBar: FC<SkillBarProps> = ({ name, percentage, color, delay, isInView 
     ? 'bg-gradient-to-r from-primary to-secondary' 
     : 'bg-gradient-to-r from-secondary to-accent';
 
+  // Generate progress bar representation
+  const getProgressBar = (percentage: number) => {
+    const fullBlocks = Math.floor(percentage / 20);
+    const emptyBlocks = 5 - fullBlocks;
+    
+    return '▰'.repeat(fullBlocks) + '▱'.repeat(emptyBlocks);
+  };
+
   return (
     <div className="skill-item">
       <motion.div 
         initial={{ opacity: 0, y: 10 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
         transition={{ duration: 0.4, delay }}
-        className="mb-2"
+        className="mb-2 flex justify-between items-center"
       >
         <span className={`font-medium ${textColorClass}`}>{name}</span>
+        <span className={`${textColorClass} font-mono text-sm`}>{getProgressBar(percentage)}</span>
       </motion.div>
       <div className="w-full h-2 bg-background rounded-full overflow-hidden">
         <motion.div 
