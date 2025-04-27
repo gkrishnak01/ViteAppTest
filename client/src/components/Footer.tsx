@@ -1,7 +1,17 @@
 
 import { motion } from 'framer-motion';
+import { useTheme } from 'next-themes';
+import { useState, useEffect } from 'react';
 
 const Footer = () => {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Avoid hydration mismatch by only rendering after component is mounted
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <footer className="py-6 mb-12 bg-background text-center z-30 relative">
       <div className="container mx-auto">
@@ -16,7 +26,7 @@ const Footer = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex items-center justify-center space-x-4"
+          className="flex flex-wrap items-center justify-center space-x-4"
         >
           <motion.div
             animate={{ 
@@ -72,6 +82,12 @@ const Footer = () => {
             <i className="fas fa-globe text-primary/50"></i>
           </motion.div>
         </motion.div>
+        
+        {mounted && (
+          <p className="text-foreground/50 text-xs mt-4">
+            Currently viewing in {theme === 'dark' ? 'Dark' : 'Light'} Mode
+          </p>
+        )}
       </div>
     </footer>
   );

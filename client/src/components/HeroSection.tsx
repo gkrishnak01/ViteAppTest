@@ -16,7 +16,7 @@ const HeroSection = () => {
   return (
     <section 
       id="hero" 
-      className="h-screen flex items-center justify-center relative overflow-hidden"
+      className="h-screen pt-16 flex items-center justify-center relative overflow-hidden"
     >
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full z-0" />
       <div className="absolute inset-0 bg-gradient-to-b from-background/30 to-background/90 z-10"></div>

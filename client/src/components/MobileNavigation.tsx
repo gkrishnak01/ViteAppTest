@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import ThemeToggle from './ThemeToggle';
 
 const navigationLinks = [
   { href: '#hero', icon: 'fa-home', label: 'Home' },
@@ -35,20 +36,25 @@ const MobileNavigation = () => {
   }, []);
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-background border-t border-primary/30 z-50 md:hidden">
-      <div className="flex justify-around items-center p-3">
-        {navigationLinks.map((link) => (
-          <a 
-            key={link.href}
-            href={link.href} 
-            className={`flex flex-col items-center ${activeLink === link.href ? 'text-secondary' : 'text-primary'}`}
-          >
-            <i className={`fas ${link.icon} ${activeLink === link.href ? 'text-secondary' : 'text-primary'}`}></i>
-            <span className="text-xs mt-1">{link.label}</span>
-          </a>
-        ))}
+    <>
+      <div className="fixed top-4 right-4 z-50 md:hidden">
+        <ThemeToggle />
       </div>
-    </nav>
+      <nav className="fixed bottom-0 left-0 right-0 bg-background border-t border-primary/30 z-50 md:hidden">
+        <div className="flex justify-around items-center p-3">
+          {navigationLinks.map((link) => (
+            <a 
+              key={link.href}
+              href={link.href} 
+              className={`flex flex-col items-center ${activeLink === link.href ? 'text-secondary' : 'text-primary'}`}
+            >
+              <i className={`fas ${link.icon} ${activeLink === link.href ? 'text-secondary' : 'text-primary'}`}></i>
+              <span className="text-xs mt-1">{link.label}</span>
+            </a>
+          ))}
+        </div>
+      </nav>
+    </>
   );
 };
 
