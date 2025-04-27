@@ -10,6 +10,7 @@ export function ThemeToggle() {
   // Avoid hydration mismatch by only rendering after component is mounted
   useEffect(() => {
     setMounted(true);
+    setTheme('dark');
   }, []);
 
   if (!mounted) {
