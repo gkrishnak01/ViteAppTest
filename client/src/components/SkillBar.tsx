@@ -20,12 +20,9 @@ const SkillBar: FC<SkillBarProps> = ({ name, percentage, color, delay, isInView 
     ? 'bg-gradient-to-r from-primary to-secondary' 
     : 'bg-gradient-to-r from-secondary to-accent';
 
-  // Generate progress bar representation
+  // Remove progress bar visual representation
   const getProgressBar = (percentage: number) => {
-    const fullBlocks = Math.floor(percentage / 20);
-    const emptyBlocks = 5 - fullBlocks;
-    
-    return '▰'.repeat(fullBlocks) + '▱'.repeat(emptyBlocks);
+    return `${percentage}%`;
   };
 
   return (

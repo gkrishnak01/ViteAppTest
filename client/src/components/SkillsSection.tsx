@@ -17,7 +17,10 @@ const fallbackTechnicalSkills = [
 ];
 
 const fallbackBusinessSkills = [
-  { id: 9, name: 'Business Development', percentage: 80, type: 'business', createdAt: new Date() }
+  { id: 9, name: 'Market Research', percentage: 85, type: 'business', createdAt: new Date() },
+  { id: 10, name: 'Investor Pitching', percentage: 80, type: 'business', createdAt: new Date() },
+  { id: 11, name: 'Supply Chain Management', percentage: 75, type: 'business', createdAt: new Date() },
+  { id: 12, name: 'ESG Compliance', percentage: 90, type: 'business', createdAt: new Date() }
 ];
 
 const fallbackTools = [
