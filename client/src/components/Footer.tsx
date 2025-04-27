@@ -3,21 +3,42 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <footer className="py-8 bg-background text-center z-30 relative">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="container mx-auto flex items-center justify-center space-x-2"
-      >
-        <i className="fas fa-rocket text-primary/50"></i>
-        <i className="fas fa-atom text-secondary/50"></i>
-        <p className="text-foreground/70 text-sm px-3">
-          © 2025 Copyright Arjith Anilkumar Viji — Materials Alchemist & Aerospace Dreamer
-        </p>
-        <i className="fas fa-flask text-accent/50"></i>
-        <i className="fas fa-satellite text-primary/50"></i>
-      </motion.div>
+    <footer className="py-12 mb-16 bg-background text-center z-30 relative">
+      <div className="container mx-auto">
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 1 }}
+          className="h-px bg-gradient-to-r from-primary/20 via-primary to-primary/20 mb-8"
+        />
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="flex items-center justify-center space-x-4"
+        >
+          <i className="fas fa-rocket text-primary/50"></i>
+          <i className="fas fa-atom text-secondary/50"></i>
+          <p className="text-foreground/70 text-sm px-3">
+            © 2025 Copyright Arjith Anilkumar Viji — Materials Alchemist & Aerospace Dreamer
+          </p>
+          <i className="fas fa-flask text-accent/50"></i>
+          <motion.div
+            animate={{ 
+              rotate: [0, 360],
+              scale: [1, 1.2, 1]
+            }}
+            transition={{ 
+              duration: 10,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          >
+            <i className="fas fa-globe text-primary/50"></i>
+          </motion.div>
+        </motion.div>
+      </div>
     </footer>
   );
 };
