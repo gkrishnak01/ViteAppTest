@@ -5,6 +5,7 @@ const navigationLinks = [
   { href: '#about', icon: 'fa-user', label: 'About' },
   { href: '#experience', icon: 'fa-briefcase', label: 'Work' },
   { href: '#projects', icon: 'fa-flask', label: 'Projects' },
+  { href: '#skills', icon: 'fa-tools', label: 'Skills' },
   { href: '#contact', icon: 'fa-envelope', label: 'Contact' }
 ];
 

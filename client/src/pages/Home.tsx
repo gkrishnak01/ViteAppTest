@@ -8,6 +8,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import NavigationDots from "@/components/NavigationDots";
 import MobileNavigation from "@/components/MobileNavigation";
+import HeaderNav from "@/components/HeaderNav";
 
 const Home = () => {
   useEffect(() => {
@@ -20,6 +21,7 @@ const Home = () => {
 
   return (
     <div className="relative">
+      <HeaderNav />
       <NavigationDots />
       <MobileNavigation />
       <HeroSection />
