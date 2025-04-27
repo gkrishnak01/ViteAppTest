@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <footer className="py-12 mb-16 bg-background text-center z-30 relative">
+    <footer className="py-6 mb-12 bg-background text-center z-30 relative">
       <div className="container mx-auto">
         <motion.div
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 1 }}
-          className="h-px bg-gradient-to-r from-primary/20 via-primary to-primary/20 mb-8"
+          className="h-px bg-gradient-to-r from-primary/20 via-primary to-primary/20 mb-4"
         />
         
         <motion.div
