@@ -6,17 +6,18 @@ import { Skill, Tool, Certification } from '@/types';
 
 // Fallback data for when API fails
 const fallbackTechnicalSkills = [
-  { id: 1, name: 'Composite Structures', percentage: 90, type: 'technical', createdAt: new Date() },
-  { id: 2, name: 'CFD Analysis', percentage: 85, type: 'technical', createdAt: new Date() },
-  { id: 3, name: 'Aerodynamics', percentage: 80, type: 'technical', createdAt: new Date() },
-  { id: 4, name: 'Sustainable Materials', percentage: 95, type: 'technical', createdAt: new Date() }
+  { id: 1, name: 'Finite Element Analysis (FEA)', percentage: 85, type: 'technical', createdAt: new Date() },
+  { id: 2, name: 'Additive Manufacturing (3D Printing)', percentage: 70, type: 'technical', createdAt: new Date() },
+  { id: 3, name: 'Materials Characterization', percentage: 80, type: 'technical', createdAt: new Date() },
+  { id: 4, name: 'Compression Molding Techniques', percentage: 85, type: 'technical', createdAt: new Date() },
+  { id: 5, name: 'Propulsion System Design', percentage: 75, type: 'technical', createdAt: new Date() },
+  { id: 6, name: 'Thermal Analysis (Heat Transfer)', percentage: 80, type: 'technical', createdAt: new Date() },
+  { id: 7, name: 'Problem-Solving & Analytical Thinking', percentage: 90, type: 'technical', createdAt: new Date() },
+  { id: 8, name: 'Structural Design & Analysis', percentage: 85, type: 'technical', createdAt: new Date() }
 ];
 
 const fallbackBusinessSkills = [
-  { id: 6, name: 'Market Research', percentage: 85, type: 'business', createdAt: new Date() },
-  { id: 7, name: 'Investor Pitching', percentage: 80, type: 'business', createdAt: new Date() },
-  { id: 8, name: 'Supply Chain Management', percentage: 75, type: 'business', createdAt: new Date() },
-  { id: 9, name: 'ESG Compliance', percentage: 90, type: 'business', createdAt: new Date() }
+  { id: 9, name: 'Business Development', percentage: 80, type: 'business', createdAt: new Date() }
 ];
 
 const fallbackTools = [
