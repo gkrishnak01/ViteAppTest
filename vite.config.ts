@@ -16,7 +16,6 @@ export default defineConfig({
         ]
       : []),
   ],
-  base: "/ViteAppTest/",
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),

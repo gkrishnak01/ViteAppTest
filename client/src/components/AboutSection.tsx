@@ -61,7 +61,7 @@ const AboutSection = () => {
               <div className="relative bg-background/80 backdrop-blur-sm p-6 rounded-lg border border-secondary/20">
                 <h3 className="font-poppins text-xl font-semibold mb-4 text-secondary">Entrepreneurial Spirit</h3>
                 <p className="text-foreground/80 leading-relaxed">
-                  Co-founded Atomix Materials, a startup driving the adoption of eco friendly composite solutions in B2B sectors. Led product development initiatives and secured pilot funding through investor-ready business models focused on sustainability.
+                  Co-founded Atomix Materials, a startup driving the adoption of eco friendly composite solutions in B2B sectors. Led product development initiatives and secured pilot funding through investor ready business models focused on sustainability.
                 </p>
               </div>
             </motion.div>

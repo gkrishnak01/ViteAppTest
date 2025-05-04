@@ -44,6 +44,34 @@ const fallbackTools = [
     icon: 'fas fa-drafting-compass', 
     tags: ['3D Modeling'],
     createdAt: new Date()
+  },
+  {
+    id: 4,
+    name: 'Python', 
+    icon: 'fa-brands fa-python', 
+    tags: ['Programming'],
+    createdAt: new Date()
+  },
+  {
+    id: 4,
+    name: 'Matlab', 
+    icon: 'fa-solid fa-calculator', 
+    tags: ['Simulation'],
+    createdAt: new Date()
+  },
+  {
+    id: 5,
+    name: 'SQL', 
+    icon: 'fa-solid fa-database', 
+    tags: ['Database Management'],
+    createdAt: new Date()
+  },
+  {
+    id: 5,
+    name: 'Arc GIS', 
+    icon: 'fa-solid fa-map', 
+    tags: ['Mapping'],
+    createdAt: new Date()
   }
 ];
 
@@ -55,6 +83,7 @@ const fallbackCertifications = [
     details: 'Specialized training in aerospace engineering workflows and industry standards.',
     icon: 'fas fa-certificate',
     color: 'primary',
+    link: "https://drive.google.com/file/d/1puzg7oJcfaghEEE5kTCKJ3LK0fKli_Cf/view?usp=sharing",
     createdAt: new Date()
   },
   {
@@ -64,6 +93,7 @@ const fallbackCertifications = [
     details: 'Application of GIS technologies for environmental and aerospace mapping applications.',
     icon: 'fas fa-globe',
     color: 'secondary',
+    link : "https://drive.google.com/file/d/1kqrUrpPxNliKC6tZAZF-BtrCKtnM4Dd1/view?usp=sharing",
     createdAt: new Date()
   },
   {
@@ -73,8 +103,20 @@ const fallbackCertifications = [
     details: 'Comprehensive understanding of energy systems and sustainability principles for aerospace applications.',
     icon: 'fas fa-bolt',
     color: 'accent',
+    link : "https://drive.google.com/file/d/1sDMwElWBKhvd3K_VGRoIf1bL_CypNg7Z/view?usp=sharing",
+    createdAt: new Date()
+  },
+  {
+    id: 4,
+    name: 'Webinar - Technical Publication & AI/Data Science in Aerospace',
+    description: 'Technical Writing and AI Applications in Aerospace',
+    details: 'Gained foundational knowledge of aerospace technical writing, data science concepts, and introductory applications of AI in research and communication',
+    icon: 'fas fa-person-chalkboard',
+    color: 'primary',
+    link : "https://drive.google.com/file/d/1gIHYGFv5iU2hAUaxqgTM9z9sg2aFWrmz/view?usp=sharing",
     createdAt: new Date()
   }
+  
 ];
 
 const SkillsSection = () => {
@@ -158,16 +200,15 @@ const SkillsSection = () => {
             </motion.h3>
             
             <div className="space-y-6">
-              {isLoadingSkills ? (
+              {false ? (
                 <div className="flex justify-center items-center h-40">
                   <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-primary"></div>
                 </div>
               ) : (
-                technicalSkills.map((skill: Skill, index: number) => (
+                fallbackTechnicalSkills.map((skill: Skill, index: number) => (
                   <SkillBar 
                     key={skill.id}
                     name={skill.name}
-                    percentage={skill.percentage}
                     color="primary"
                     delay={0.1 * (index + 1) + 0.3}
                     isInView={isInView}
@@ -187,16 +228,15 @@ const SkillsSection = () => {
             </motion.h3>
             
             <div className="space-y-6">
-              {isLoadingSkills ? (
+              {false ? (
                 <div className="flex justify-center items-center h-40">
                   <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-secondary"></div>
                 </div>
               ) : (
-                businessSkills.map((skill: Skill, index: number) => (
+                fallbackBusinessSkills.map((skill: Skill, index: number) => (
                   <SkillBar 
                     key={skill.id}
                     name={skill.name}
-                    percentage={skill.percentage}
                     color="secondary"
                     delay={0.1 * (index + 1) + 0.9}
                     isInView={isInView}
@@ -218,7 +258,7 @@ const SkillsSection = () => {
               Tools & Software
             </motion.h3>
             
-            {isLoadingTools ? (
+            {false ? (
               <div className="flex justify-center items-center h-40">
                 <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-primary"></div>
               </div>
@@ -230,7 +270,7 @@ const SkillsSection = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="grid grid-cols-2 gap-4 mb-12"
               >
-                {tools?.map((tool: Tool, index: number) => (
+                {fallbackTools?.map((tool: Tool, index: number) => (
                   <motion.div 
                     key={tool.id} 
                     className="bg-background/30 p-4 rounded-lg border border-primary/20 group hover:border-primary transition-colors duration-300"
@@ -267,13 +307,14 @@ const SkillsSection = () => {
               Certifications
             </motion.h3>
             
-            {isLoadingCerts ? (
+            {false ? (
               <div className="flex justify-center items-center h-40">
                 <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-secondary"></div>
               </div>
             ) : (
               <div className="grid grid-cols-1 gap-6">
-                {certifications?.map((cert: Certification, index: number) => (
+                {fallbackCertifications?.map((cert: Certification, index: number) => (
+                  <a href= {cert?.link} target='blank'>
                   <motion.div 
                     key={cert.id}
                     initial="hidden"
@@ -309,6 +350,7 @@ const SkillsSection = () => {
                       )}
                     </div>
                   </motion.div>
+                  </a>
                 ))}
               </div>
             )}

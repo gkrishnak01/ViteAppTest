@@ -37,6 +37,7 @@ export interface Certification {
   color: string; // adjust to match the data coming from database
   certificate_path?: string | null;
   createdAt: Date;
+  link : string;
 }
 
 // Experience related types
