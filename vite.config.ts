@@ -7,8 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     runtimeErrorOverlay(),
-    ...(process.env.NODE_ENV !== "production" &&
-    process.env.REPL_ID !== undefined
+    ...(true
       ? [
           await import("@replit/vite-plugin-cartographer").then((m) =>
             m.cartographer(),
@@ -16,6 +15,7 @@ export default defineConfig({
         ]
       : []),
   ],
+  base : "/ViteAppTest/",
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
